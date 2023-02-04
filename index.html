@@ -29,7 +29,7 @@
               <a class="header-nav link carrent" href="">Studio</a>
             </li>
             <li class="item">
-              <a class="header-nav link carrent" href="./portfolio.html">Portfolio</a>
+              <a class="header-nav link" href="./portfolio.html">Portfolio</a>
             </li>
             <li class="item">
               <a class="header-nav link" href="">Contacts</a>
@@ -57,7 +57,7 @@
       <section class="hero style">
         <div class="container">
           <h1 class="hero-title">Effective Solutions for Your Business</h1>
-          <button class="hero-button">Order Service</button>
+          <button class="hero-button" data-modal-open type="button">Order Service</button>
         </div>
       </section>
       <!--2-->
@@ -421,7 +421,7 @@
             </li>
             <li class="footer-social-item list">
               <a href="" class="footer-social-link green">
-                <svg class="footer-social-icon" with="24" height="24">
+                <svg class="footer-social-icon" width="24" height="24">
                   <use href="./images/sprite.svg.svg#icon-linkedinsvg"></use>
                 </svg>
               </a>
@@ -430,5 +430,17 @@
         </div>
       </div>
     </footer>
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal">
+        <button type="button" class="modal-close" data-modal-close>
+          <span class="">
+            <svg class="vector" width="8" height="8">
+              <use href="./images/sprite.svg.svg#icon-Vector"></use>
+            </svg>
+          </span>
+        </button>
+      </div>
+    </div>
+    <script src="./js/modal.js"></script>
   </body>
 </html>
