@@ -597,6 +597,9 @@ padding-bottom: 120px ;
 
 .element {
     /*box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08);*/
+    border-left: 1px solid rgba(231, 233, 252, 1);
+    border-bottom:1px solid rgba(231, 233, 252, 1); 
+    border-right: 1px solid rgba(231, 233, 252, 1);;
     background: #FFFFFF;
     width: calc((100% - 48px) / 3)
     }
@@ -638,6 +641,7 @@ position: relative;
 overflow: hidden;
 }
 .overlay-link{
+    display: block;
     transition-property: box-shadow;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
