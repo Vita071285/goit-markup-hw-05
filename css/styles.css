@@ -596,17 +596,21 @@ padding-bottom: 120px ;
 }
 
 .element {
-    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08);
+    /*box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08);*/
     background: #FFFFFF;
     width: calc((100% - 48px) / 3)
     }
-    .element:focus,
+    /*.element:focus,
     .element:hover{
     box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
             0px 1px 1px rgba(46, 47, 66, 0.16),
             0px 2px 1px rgba(46, 47, 66, 0.08);
             cursor: pointer;
-    }
+    }*/
+        .element:hover .overlay,
+        .element:focus .overlay {
+            transform: translateY(0);
+        }
 
 .product-title {
     font-weight: var(--text-font-weight);
@@ -635,7 +639,6 @@ overflow: hidden;
 }
 .overlay-link{
     transition-property: box-shadow;
-    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08);
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -643,7 +646,17 @@ overflow: hidden;
 .overley-link:focus .overlay{
     transform: translateY(0);
 }
-
+.overlay-link:focus,
+.overley-link:hover {
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08);
+        /*box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+                    0px 1px 1px rgba(46, 47, 66, 0.16),
+                    0px 2px 1px rgba(46, 47, 66, 0.08);*/
+        cursor: pointer;
+        /*transition-duration: 250ms;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        cursor: pointer;*/
+}
 .overlay {
     position: absolute;
     top: 0;
@@ -660,10 +673,7 @@ overflow: hidden;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.element:hover .overlay,
-.element:focus .overlay {
-    transform: translateY(0);
-}
+
 .text-overlay{
 font-weight: 400;
 font-size: 16px;
